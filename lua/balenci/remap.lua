@@ -7,7 +7,6 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 --vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 --vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-
 --keeps cursor in the middle when searching and half page scrolling
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -19,7 +18,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 --copies to system clipboard
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 --just dont press Q i guess?
@@ -37,3 +36,11 @@ vim.keymap.set("n", "<leader>nt", ":sp<bar>term<cr><c-w>J:resize10<cr>")
 --exit terminal mode
 vim.keymap.set("t", "<leader>et", "<C-\\><C-n><C-W>w")
 
+--format document
+vim.keymap.set("n", "<leader>f", ":Format<cr>")
+vim.keymap.set("n", "<leader>F", ":FormatWrite<cr>")
+
+--go through buffers
+vim.keymap.set("n", "<leader>n", ":bnext<cr>")
+vim.keymap.set("n", "<leader>p", ":bprevious<cr>")
+vim.keymap.set("n", "<leader>d", ":bdelete<cr>")
